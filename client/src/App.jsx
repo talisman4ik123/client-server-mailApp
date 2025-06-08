@@ -1,7 +1,11 @@
+import PreMessage from "./components/PreMessage"
+
 function App() {
   return (
     <>
-      Hello World!
+      <PreMessage/>
+      <PreMessage/>
+      <PreMessage/>
     </>
   )
 }
