@@ -1,11 +1,9 @@
-import PreMessage from "./components/PreMessage"
+import Registration from "./pages/registration"
 
 function App() {
   return (
     <>
-      <PreMessage/>
-      <PreMessage/>
-      <PreMessage/>
+      <Registration/>
     </>
   )
 }
