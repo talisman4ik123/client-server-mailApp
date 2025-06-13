@@ -3,7 +3,7 @@ import { TextField } from '@mui/material';
 function MainInput({children, type}) {
     return (
         <TextField 
-            id="outlined-basic" 
+            id={`outlined-basic-${type}`} 
             label={children} 
             variant="outlined" 
             size='small'

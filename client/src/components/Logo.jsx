@@ -1,6 +1,9 @@
-function Logo() {
+function Logo({classes}) {
     return (
-        <div>Logo</div>
+        <div className={`flex items-center ml-auto ${classes}`}>
+            <img className="max-w-16" src="/logo.avif"/>
+            <span className="ml-[-8px] font-semibold underline underline-offset-4">Mail App</span>
+        </div>
     )
 }
 

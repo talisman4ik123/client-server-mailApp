@@ -22,13 +22,28 @@ function PassInput() {
     };
 
     return (
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+        <FormControl variant="outlined" sx={{
+          '.css-8rrztj-MuiFormLabel-root-MuiInputLabel-root': {
+            transform: 'translate(14px, 10px) scale(1)'
+          },
+
+          '.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'black',
+            borderWidth: "1px",
+          },
+
+          '.MuiInputLabel-root.Mui-focused': {
+            color: 'black',
+          },
+        }}>
+          <InputLabel htmlFor="outlined-adornment-password" sx={{ fontSize: '14px' }}>password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
             type={showPassword ? 'text' : 'password'}
             autoComplete="new-password"
             name="new-password"
+            size='small'
+            sx={{ minWidth: '300px' }}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
@@ -44,7 +59,7 @@ function PassInput() {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
+            label="password"
           />
         </FormControl>
     )
