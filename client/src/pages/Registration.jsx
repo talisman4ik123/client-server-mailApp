@@ -8,9 +8,9 @@ function Registration() {
     return (
         <Wrapper>
             <SubWrapper>
-                <Logo classes={"mb-10"}/>
+                <Logo classes={"mb-10 ml-auto"}/>
                 <div className="flex">
-                    <MySlider/>
+                    <div className="max-w-[350px] mr-[50px]"><MySlider/></div>
                     <RegForm/>
                 </div>
             </SubWrapper>

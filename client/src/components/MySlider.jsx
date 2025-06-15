@@ -14,7 +14,6 @@ function MySlider() {
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      style={{maxWidth: `350px`, marginRight: '50px'}}
               autoplay={{
           delay: 3000, // задержка 3 секунды
           disableOnInteraction: false, // автоплей продолжится после взаимодействия
