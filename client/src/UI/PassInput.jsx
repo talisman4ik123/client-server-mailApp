@@ -7,7 +7,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import * as React from 'react';
 
-function PassInput() {
+function PassInput({inputState}) {
 
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -43,6 +43,7 @@ function PassInput() {
             autoComplete="new-password"
             name="new-password"
             size='small'
+            {...inputState}
             sx={{ minWidth: '300px' }}
             endAdornment={
               <InputAdornment position="end">

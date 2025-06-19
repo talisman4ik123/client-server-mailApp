@@ -3,7 +3,7 @@ import Alert from '@mui/material/Alert';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-function Notify({children}) {
+function Notify({children, type}) {
 
     const dispatch = useDispatch();
 
@@ -20,9 +20,9 @@ function Notify({children}) {
 
     return (
         <div>
-            <Snackbar open={open} onClose={handleClose} autoHideDuration={6000} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
+            <Snackbar open={open} onClose={handleClose} autoHideDuration={5000} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
                 <Alert
-                    severity="error"
+                    severity={type}
                     variant="filled"
                     sx={{ width: '100%' }}
                 >

@@ -15,7 +15,7 @@ function Registration() {
     return (
         <Wrapper>
             {loading && <Loading/>}
-            {error && <Notify>{error}</Notify>}
+            {error && <Notify type={"error"}>{error}</Notify>}
             <SubWrapper>
                 <Logo classes={"mb-10 ml-auto"}/>
                 <div className="flex">

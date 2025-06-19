@@ -1,12 +1,13 @@
 import { TextField } from '@mui/material';
 
-function MainInput({children, type}) {
+function MainInput({children, type, inputState}) {
     return (
         <TextField 
             id={`outlined-basic-${type}`} 
             label={children} 
             variant="outlined" 
             size='small'
+            {...inputState}
             type={type}
             autoComplete="off"
             required

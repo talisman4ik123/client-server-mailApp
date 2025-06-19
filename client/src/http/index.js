@@ -31,3 +31,35 @@ export function registration(data) {
         }
     };
 }
+
+export function login(data) {
+    return async function (dispatch) {
+        dispatch({ type: "loading/start" });
+
+        try {
+            const response = await fetch(`${API_URL}login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                dispatch({
+                    type: "loading/finish",
+                    payload: error.message || "Error during login!",
+                });
+                return;
+            }
+
+            const token = await response.json();
+            dispatch({ type: "loading/finish", payload: null });
+            return {
+                status: 200,
+                token,
+            };
+        } catch (error) {
+            dispatch({ type: "loading/finish", payload: error.message });
+        }
+    };
+}
