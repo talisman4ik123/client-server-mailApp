@@ -26,7 +26,7 @@ function LogForm() {
 
         if(result && result.status === 200) {
             localStorage.setItem("token", result.token.token);
-            navigate('/messages');
+            navigate('/inbox');
         }
     }
 

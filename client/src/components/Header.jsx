@@ -19,7 +19,7 @@ function Header() {
     };
 
     return (
-        <header className="w-full bg-white px-8 py-4 shadow flex justify-between items-center">
+        <header className="w-full bg-white px-8 py-4 flex justify-between items-center">
             <Logo/>
             <SearchInput/>
             <div className="flex items-center relative">

@@ -1,7 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Registration from "./pages/Registration"
 import Login from "./pages/Login"
-import Main from "./pages/Main"
+import Inbox from "./pages/Inbox"
+import Unread from "./pages/Unread"
+import Important from "./pages/Important"
+import Sent from "./pages/Sent"
+import Bin from "./pages/Bin"
 
 
 const router = createBrowserRouter([
@@ -14,8 +18,24 @@ const router = createBrowserRouter([
     element: <Registration/>
   },
   {
-    path: "/messages",
-    element: <Main/>
+    path: "/inbox",
+    element: <Inbox/>
+  },
+  {
+    path: "/unread",
+    element: <Unread/>
+  },
+  {
+    path: "/important",
+    element: <Important/>
+  },
+  {
+    path: "/sent",
+    element: <Sent/>
+  },
+  {
+    path: "/bin",
+    element: <Bin/>
   }
   // {
   //   path: "/login",
